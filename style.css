@@ -1,0 +1,120 @@
+* {
+    font-family: Chalkduster, fantasy;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #000000; 
+    background: transparent;
+    display: grid;
+    grid-template-rows: 100px 1fr 60px;
+    grid-template-columns: 1fr;
+    height: 100vh;
+}
+
+.header {
+    background-color: rgb(245, 238, 228);
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header h1 {
+    color: #817076;
+    font-size: 48px;
+}
+
+.main {
+    background-color: #bfb1ad;
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    height: 100%;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.message {
+    font-size: 40px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.gameboard {
+    height: 450px;
+    width: 450px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: 3px solid black;
+}
+
+.square {
+    box-sizing: border-box;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px; 
+    overflow: hidden; 
+}
+
+.square:hover {
+    background-color: #bfb1ad;
+}
+
+.symbol {
+    font-size: 100px;  
+}
+
+.footer {
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+    background-color: #817076;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.square.X {
+    background-color: lightcoral;
+}
+
+.square.O {
+    background-color: lightblue;
+}
+
+.restart {
+    color: rgb(245, 238, 228);
+    background-color: #817076;
+    border: 3px solid rgb(245, 238, 228);
+    border-radius: 8px;
+    padding: 20px 20px;
+    font-size: x-large;
+    cursor: pointer;
+    width: 200px;
+    margin-bottom:10px;
+}
+
+.restart:hover {
+    color: #817076;
+    background-color: rgb(245, 238, 228);
+}
+
+a {
+    text-decoration: none;
+    color: rgb(245, 238, 228);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+span {
+    color: rgb(245, 238, 228);
+    margin: 0px 10px;
+}
