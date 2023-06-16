@@ -37,6 +37,7 @@ const gameModule = (() => {
         console.log(gameBoard.board);
         counter += 1;
         checkWinner();
+        checkTie();
       }
     }};
   
@@ -61,6 +62,12 @@ const gameModule = (() => {
           gameOver = true;
         }
       }
+    };
+
+    const checkTie = () => {
+        if (!gameBoard.board.includes("") && gameOver == false) {
+            message.textContent = "It's a tie!"
+        }
     };
 
     const restartGame = () => {
